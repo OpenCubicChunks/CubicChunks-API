@@ -28,7 +28,7 @@ import static io.github.opencubicchunks.cubicchunks.api.util.Coords.getCubeXForE
 import static io.github.opencubicchunks.cubicchunks.api.util.Coords.getCubeYForEntity;
 import static io.github.opencubicchunks.cubicchunks.api.util.Coords.getCubeZForEntity;
 
-import io.github.opencubicchunks.cubicchunks.api.ICube;
+import io.github.opencubicchunks.cubicchunks.api.world.ICube;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;

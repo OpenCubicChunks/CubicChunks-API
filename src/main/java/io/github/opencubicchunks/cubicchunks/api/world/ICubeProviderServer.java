@@ -21,10 +21,8 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-package io.github.opencubicchunks.cubicchunks.api;
+package io.github.opencubicchunks.cubicchunks.api.world;
 
-import io.github.opencubicchunks.cubicchunks.api.ICube;
-import io.github.opencubicchunks.cubicchunks.api.ICubeProvider;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.world.chunk.Chunk;
 

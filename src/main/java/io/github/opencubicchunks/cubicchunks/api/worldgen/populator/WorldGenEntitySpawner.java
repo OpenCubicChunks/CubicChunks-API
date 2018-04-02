@@ -23,8 +23,8 @@
  */
 package io.github.opencubicchunks.cubicchunks.api.worldgen.populator;
 
-import io.github.opencubicchunks.cubicchunks.api.ICube;
-import io.github.opencubicchunks.cubicchunks.api.ICubicWorld;
+import io.github.opencubicchunks.cubicchunks.api.world.ICube;
+import io.github.opencubicchunks.cubicchunks.api.world.ICubicWorld;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureType;

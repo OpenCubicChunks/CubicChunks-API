@@ -21,7 +21,7 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-package io.github.opencubicchunks.cubicchunks.api;
+package io.github.opencubicchunks.cubicchunks.api.world;
 
 import mcp.MethodsReturnNonnullByDefault;
 
@@ -29,18 +29,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-public interface IMinMaxHeight {
-    /**
-     * Returns Y position of the bottom block in the world
-     */
-    default int getMinHeight() {
-        return 0;
-    }
-
-    /**
-     * Returns Y position of block above the top block in the world,
-     */
-    default int getMaxHeight() {
-        return 256;
-    }
+public interface ICubicWorldServer extends ICubicWorld {
+    ICubeProviderServer getCubeCache();
 }

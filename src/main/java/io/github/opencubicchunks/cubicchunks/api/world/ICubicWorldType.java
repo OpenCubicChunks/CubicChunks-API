@@ -21,31 +21,23 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  *  THE SOFTWARE.
  */
-package io.github.opencubicchunks.cubicchunks.api;
+package io.github.opencubicchunks.cubicchunks.api.world;
 
-import io.github.opencubicchunks.cubicchunks.api.ICube;
-import io.github.opencubicchunks.cubicchunks.api.util.XYZAddressable;
+import io.github.opencubicchunks.cubicchunks.api.util.IntRange;
+import io.github.opencubicchunks.cubicchunks.api.worldgen.ICubeGenerator;
 import mcp.MethodsReturnNonnullByDefault;
-import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-public interface ICubeWatcher extends XYZAddressable {
+public interface ICubicWorldType {
 
-    boolean isSentToPlayers();
+    // TODO: Make it Nonnull. VanillaCubic uses null
+    @Nullable ICubeGenerator createCubeGenerator(World world);
 
-    @Nullable ICube getCube();
-
-    void sendPacketToAllPlayers(IMessage packet);
-
-    @Override int getX();
-
-    @Override int getY();
-
-    @Override int getZ();
-
-    boolean shouldTick();
+    IntRange calculateGenerationHeightRange(WorldServer world);
 }
