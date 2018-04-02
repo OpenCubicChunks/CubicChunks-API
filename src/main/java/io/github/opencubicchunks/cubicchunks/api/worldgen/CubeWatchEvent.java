@@ -35,7 +35,7 @@ import net.minecraftforge.fml.common.eventhandler.Event;
 
 /**
  * This event fired from server thread every time player start to watch 
- * (sent updates to client) {@link ICube} associated with {@link CubeWatcher}.
+ * (sent updates to client) {@link ICube} associated with {@link ICubeWatcher}.
  * This event can be fired several times for a same cube during game session
  * for a same and for a different players.
  *
