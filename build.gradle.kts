@@ -40,6 +40,7 @@ apply {
 }
 
 // TODO: Reduce duplication of buildscript code between CC projects?
+group = "io.github.opencubicchunks"
 version = getModVersion()
 
 val theForgeVersion: String by project
