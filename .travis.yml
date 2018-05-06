@@ -12,7 +12,8 @@ jdk:
 env: GRADLE_OPTS="-Xmx2500M"
 before_install:
   # workaround to get "git describe" working
-  - git fetch --unshallow --tags | true # may fail if there are less than 50 commits
+  - git fetch --tags # separate in case the one below fails
+  - git fetch --unshallow | true # may fail if there are less than 50 commits
   - git describe
   - ./gradlew setupCiWorkspace
 #setupCIWorkspace is needed because of https://github.com/MinecraftForge/ForgeGradle/issues/410
