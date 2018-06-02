@@ -40,4 +40,8 @@ public interface ICubicWorldType {
     @Nullable ICubeGenerator createCubeGenerator(World world);
 
     IntRange calculateGenerationHeightRange(WorldServer world);
+
+    default boolean hasCubicGeneratorForWorld(World workd) {
+        return true;
+    }
 }
