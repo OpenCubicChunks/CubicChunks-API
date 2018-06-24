@@ -26,12 +26,12 @@ package io.github.opencubicchunks.cubicchunks.api.util;
 import net.minecraft.util.datafix.IFixType;
 import net.minecraft.world.WorldType;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
-public class GeneratorSettingsFix implements IFixType {
+public enum GeneratorSettingsFix implements IFixType {
+
+    INSTANCE;
 
     private static Set<WorldType> generatorSettingsWorldTypes = new HashSet<>();
 
