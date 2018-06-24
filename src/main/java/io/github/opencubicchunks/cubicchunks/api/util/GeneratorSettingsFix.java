@@ -27,21 +27,23 @@ import net.minecraft.util.datafix.IFixType;
 import net.minecraft.world.WorldType;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class GeneratorSettingsFix implements IFixType {
 
-    private static Map<WorldType, GeneratorSettingsFix> generatorSettingsWorldTypes = new HashMap<>();
+    private static Set<WorldType> generatorSettingsWorldTypes = new HashSet<>();
 
     public static void addFixableWorldType(WorldType type) {
-        generatorSettingsWorldTypes.put(type, new GeneratorSettingsFix());
+        generatorSettingsWorldTypes.add(type);
     }
 
-    public static GeneratorSettingsFix forWorldType(String type) {
-        return generatorSettingsWorldTypes.get(WorldType.parseWorldType(type));
+    public static boolean hasWorldType(String type) {
+        return generatorSettingsWorldTypes.contains(WorldType.parseWorldType(type));
     }
 
-    public static GeneratorSettingsFix forWorldType(WorldType type) {
-        return generatorSettingsWorldTypes.get(type);
+    public static boolean hasWorldType(WorldType type) {
+        return generatorSettingsWorldTypes.contains(type);
     }
 }
